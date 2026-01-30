@@ -1,0 +1,33 @@
+.cndItem {
+  width: 180px;
+  padding: 12px;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.cndItem:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.validity {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.open {
+  margin-top: auto;
+  font-size: 13px;
+  text-decoration: underline;
+}
