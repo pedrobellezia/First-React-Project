@@ -1,5 +1,6 @@
 services:
   frontend:
+    container_name: cnd-web
     build: .
     ports:
       - "8070:80"

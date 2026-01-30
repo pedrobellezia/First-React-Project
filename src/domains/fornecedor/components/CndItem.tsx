@@ -11,9 +11,7 @@ export function CndItem({ cnd }: Props) {
 
   if (!cnd.CndType) return null;
 
-  // Formata a data para dd/mm/aaaa sem problemas de timezone
   function formatDate(dateStr: string) {
-    // Espera-se o formato yyyy-mm-dd
     const match = dateStr.match(/^(\d{4})-(\d{2})-(\d{2})/);
     if (!match) return dateStr;
     const [, year, month, day] = match;
