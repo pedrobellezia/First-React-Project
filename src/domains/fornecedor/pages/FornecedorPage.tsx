@@ -3,7 +3,7 @@ import { FornecedorCard } from "../components/FornecedorCard";
 import { useFornecedores } from "../hooks/useFornecedores";
 import Button from "../../../shared/components/Button";
 import { FornecedorFormModal } from "../components/FornecedorFormModal";
-import { FornecedorApi } from "../api"; 
+import { FornecedorApi } from "../api";
 
 export default function FornecedorPage() {
   const { data, loading, error, refresh } = useFornecedores();
@@ -43,7 +43,7 @@ export default function FornecedorPage() {
       )}
 
       {!loading && !error && (
-        <div className="row">
+        <div className="d-flex flex-column gap-3">
           {Array.isArray(data) && data.length === 0 && (
             <div className="text-center col-12 py-5">
               Nenhum fornecedor encontrado.
@@ -52,7 +52,7 @@ export default function FornecedorPage() {
 
           {Array.isArray(data) &&
             data.map((fornecedor) => (
-              <div className="col-md-6 col-lg-4 mb-3" key={fornecedor.id}>
+              <div key={fornecedor.id}>
                 <FornecedorCard
                   name={fornecedor.name}
                   cnds={fornecedor.FornecedorCnds ?? []}
