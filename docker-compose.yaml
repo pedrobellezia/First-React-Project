@@ -2,6 +2,8 @@ services:
   frontend:
     container_name: cnd-web
     build: .
+    environment:
+      - VITE_API_URL=${VITE_API_URL}
     ports:
       - "8070:80"
     restart: unless-stopped
